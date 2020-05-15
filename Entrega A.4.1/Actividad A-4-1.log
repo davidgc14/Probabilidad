@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7420) (preloaded format=pdflatex 2020.5.15)  15 MAY 2020 11:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7420) (preloaded format=pdflatex 2020.5.15)  15 MAY 2020 11:40
 entering extended mode
-**"c:/Users/Arquímedes/Desktop/Latex/Probabilidad/Actividad A-4-1.tex"
-("c:/Users/Arquímedes/Desktop/Latex/Probabilidad/Actividad A-4-1.tex"
+**"c:/Users/Arquímedes/Desktop/Latex/Probabilidad/Entrega A.4.1/Actividad A-4-1.tex"
+("c:/Users/Arquímedes/Desktop/Latex/Probabilidad/Entrega A.4.1/Actividad A-4-1.tex"
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-05-11> ("C:\Users\Arquímedes\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -421,7 +421,7 @@ Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 File: l3backend-pdfmode.def 2020-05-05 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count295
 \l__pdf_internal_box=\box61
-) ("c:/Users\Arquímedes\Desktop\Latex\Probabilidad\Actividad A-4-1.aux")
+) ("c:/Users\Arquímedes\Desktop\Latex\Probabilidad\Entrega A.4.1\Actividad A-4-1.aux")
 \openout1 = `"Actividad A-4-1.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
@@ -493,17 +493,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) 
 AED: lastpage setting LastPage
-[1{C:/Users/Arquímedes/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] ("c:/Users\Arquímedes\Desktop\Latex\Probabilidad\Actividad A-4-1.aux") ) 
+[1{C:/Users/Arquímedes/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] ("c:/Users\Arquímedes\Desktop\Latex\Probabilidad\Entrega A.4.1\Actividad A-4-1.aux") ) 
 Here is how much of TeX's memory you used:
  25654 strings out of 480811
- 644503 string characters out of 2893361
+ 644647 string characters out of 2893361
  1025906 words of memory out of 3000000
  41219 multiletter control sequences out of 15000+200000
  538191 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,7n,98p,783b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,7n,98p,797b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "c:/Users\Arquímedes\Desktop\Latex\Probabilidad\Actividad A-4-1.pdf" (2 pages, 45785 bytes).
+Output written on "c:/Users\Arquímedes\Desktop\Latex\Probabilidad\Entrega A.4.1\Actividad A-4-1.pdf" (2 pages, 45785 bytes).
 PDF statistics:
  28 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
