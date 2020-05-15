@@ -1,0 +1,98 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{mathexam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{dsfont} %Numeros reales, naturales...
+\usepackage{verbatimbox} %comentarios
+
+%\graphicspath{{images/}}
+\newcommand*{\qed}{\hfill\ensuremath{\square}}
+
+%Estructura de ecuaciones
+\setlength{\textwidth}{15cm} \setlength{\oddsidemargin}{5mm}
+\setlength{\textheight}{23cm} \setlength{\topmargin}{-1cm}
+
+
+
+\author{David García Curbelo}
+\title{Probabilidad}
+\date{Problema P16 Propuesto}
+
+\pagestyle{empty}
+
+
+\def\R{\mathds{R}}
+\def\sup{$^2$}
+
+\begin{document}
+    \maketitle
+    \setcounter{page}{1}
+    \pagestyle{plain}
+
+    {\textit{El vector aleatorio $(X, Y)$ se distribuye según una uniforme sobre el recinto:
+    $$R=\{(x,y); 0<x<y<1\}$$
+    Calcular:
+    \begin{itemize}
+        \item Su función generatriz de momentos conjunta.
+        \item Las distribuciones generatrices de momentos marginales.
+        \item La covarianza de X e Y.\\ \\
+    \end{itemize}
+    }}
+
+    {\textbf{Función generatriz de momentos conjunta}}
+    Calculemos primero su función de densidad, la cual viene dada por 
+    $$f_{(X,Y)}(x,y)=2 \cdot 1_{[R]}(x,y)=2; \quad 0<x<y<1$$
+    Sabemos que la función generatriz de momentos conjuntos se calcula mediante
+    $$M_{X,Y}(t_1,t_2)=E\left[exp(t_1 X + t_2Y)\right]$$
+    Como se trata de vector aleatorio continuo, el calculo de la esperanza se calcula
+    de la siguiente forma
+    $$E\left[exp(t_1 X + t_2Y)\right]=2\int _0^1 \int_x^1 exp(t_1x+t_2y)dydx = 2\int _0^1 e^{t_1x}\int_x^1 e^{t_2y}dydx = 
+    $$$$\frac{2}{t_2}\int _0^1 e^{t_1x} \left[e^{t_2}-e^{t_2x}\right] dx = \frac{2}{t_2}\int _0^1 e^{t_1x+t_2} -e^{x(t_1+t_2)} dx$$
+    $$\Rightarrow M_{X,Y}(t_1,t_2)=2\frac{(t_1+t_2)e^{t_2}[e^{t_1}-1]+t_1[1-e^{t_1+t_2}]}{t_1t_2(t_1+t_2)}, \quad \forall (t_1,t_2) \in \R^2$$
+    
+    Usando el desarrollo de Taylor visto en clase, llegamos a la expresión
+    $$M_{(X,Y)}(t_1,t_2) = 2 \left[\sum_{k=1}^{\infty} \frac{t_1^{k-1}}{k!} + \sum_{l=1}^{\infty} \frac{t_1^{l-1}t_2^k}{(k+1)!l!} - \sum _{u=1}^{k-1} \frac{\binom{k-1}{u} t_1^{k-1-u}t_2^{u-1}}{k!}\right]$$
+    
+    \newpage
+
+    {\textbf{Distribuciones generatrices de momentos marginales}}
+
+    Calculamos primero la marginal de X. Dicha marginal viene dada por 
+    $$M_X(t_1)=M_{X,Y} (t_1,0), \forall t_1 \in \R.$$
+    
+    Notemos que la sustitución $t_2=0$ en $M_{X,Y}(t_1,t_2)$ puede producir una indeterminación, por ello tengamos 
+    en cuenta que la función generatriz de momentos es derivable y, por tanto, continua. Así, obtenemos
+    $$M_X(t_1)=\lim_{t_2\rightarrow 0}M_{X,Y} (t_1,t_2)= \lim_{t_2\rightarrow 0} 2 \left[\sum_{k=1}^{\infty} \frac{t_1^{k-1}}{k!} + \sum_{l=1}^{\infty} \frac{t_1^{l-1}t_2^k}{(k+1)!l!} - \sum _{u=1}^{k-1} \frac{\binom{k-1}{u} t_1^{k-1-u}t_2^{u-1}}{k!}\right] = $$
+    $$= 2\sum_{k=1}^{\infty} \frac{t_1^{k-1}}{k!} =\frac{2}{t_1} \left[ \sum_{k=0}^{\infty} \frac{t_1^{k}}{k!} -1\right] = \frac{2}{t_1}[e^{t_1}-1]
+     \quad \forall t_1 \in \R$$
+
+    Procedemos al cálculo de la marginal de $Y$ mediante el mismo proceso. Dicha marginal viene dada por
+    $$M_Y(t_2)=M_{X,Y} (0,t_2), \forall t_2 \in \R.$$
+    
+    Observamos que en todos los términos de la función $M_{X,Y} (t_1,t_2)$ aparece el término $t_1$, por tanto es fácil ver que
+    $$M_Y(t_2)=\lim_{t_1\rightarrow 0}M_{X,Y} (t_1,t_2)= $$$$\lim_{t_1\rightarrow 0} 2 \left[\sum_{k=1}^{\infty} \frac{t_1^{k-1}}{k!} + \sum_{l=1}^{\infty} \frac{t_1^{l-1}t_2^k}{(k+1)!l!} - \sum _{u=1}^{k-1} \frac{\binom{k-1}{u} t_1^{k-1-u}t_2^{u-1}}{k!}\right]
+    = 0,\quad \forall t_2 \in \R$$
+
+    \newpage
+
+    {\textbf{Covarianza de X e Y}}
+    
+    La covarianza de dos variables aleatorias viene dado por 
+    $$Cov(X,Y)=E[XY]-E[X]E[Y]$$
+    Recordamos que la esperanza se define como
+    $$E[g(x,y)]=\int _{-\infty}^{\infty} \int _{-\infty}^{\infty} g(x,y) f_{(X,Y)}(x,y)dydx$$\\ \\
+
+    $$\Rightarrow E[XY]= \int _{-\infty}^{\infty} \int _{-\infty}^{\infty} 2xy dydx = \int _{0}^{1} \int _{x}^{1} 2xy dydx = \int _{0}^{1} x-x^3dx=\frac{1}{4}$$
+    $$E[X]=\int _{0}^{1} \int _{x}^{1} 2x dydx = \int _{0}^{1} 2x-2x^2 dx = \frac{1}{3}$$
+    $$E[Y]=\int _{0}^{1} \int _{x}^{1} 2y dydx = \int _{0}^{1} 1-x^2 dx = \frac{2}{3}$$\\ \\
+
+    $$\Rightarrow Cov(X,Y)=\frac{1}{4}-\frac{2}{9}=\frac{1}{36}$$
+\end{document}

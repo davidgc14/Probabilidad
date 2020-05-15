@@ -1,0 +1,130 @@
+\documentclass[fleqn]{article}
+
+%\pgfplotsset{compat=1.17}
+
+\usepackage{mathexam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{dsfont} %Numeros reales, naturales...
+
+%\graphicspath{{images/}}
+\newcommand*{\QED}{\hfill\ensuremath{\square}}
+
+%Estructura de ecuaciones
+\setlength{\textwidth}{15cm} \setlength{\oddsidemargin}{5mm}
+\setlength{\textheight}{23cm} \setlength{\topmargin}{-1cm}
+
+
+
+\author{David García Curbelo}
+\title{Probabilidad}
+\date{Ejercicios teóricos propuestos 31 de marzo}
+
+\pagestyle{empty}
+
+
+\def\R{\mathds{R}}
+\def\N{\mathds{N}}
+\def\sup{$^2$}
+
+
+\begin{document}
+
+    \setcounter{page}{1}
+    \pagestyle{plain}
+    \maketitle
+    
+
+    \textbf{Ejercicio 1: } \textit{Sea $(X,Y)$ un vector aleatorio discreto con
+    función masa de probabilidad
+    $$P(X=x,Y=y)=\frac{k}{2^{x+y}}, \quad x,y \in \N$$
+    Calcular la función masa de probabilidad de $X+Y$ y $X-Y$.}\\ \\
+
+    Calculemos primero la función masa de probabilidad de $X+Y$. Tomando $k=1/4$, defino el cambio de variable
+    \begin{equation*}
+            g:\R^2 \longrightarrow \R, \quad
+            (X,Y) \longmapsto g(X,Y) = Z = X+Y
+    \end{equation*}
+    que tiene por inversa
+    \begin{equation*}
+        g^{-1}:= \left\{
+        \begin{aligned}
+            X^{-1}(z) = X \\
+            Y^{-1}(z) = Z - X           
+        \end{aligned}
+        \right.
+    \end{equation*}
+
+    Calculemos a continuación su función masa de probabilidad 
+    $$P_{(X+Y)}(x+y) = P_Z(z) = P_{(X,Y)}(g^{-1}(z)) = P_{(X+Y)}(x,x-z) = $$
+    $$\sum _{x=0}^z \frac{1}{2^{2+x+z-x}} = \sum _{x=0}^z \frac{1}{2^{2+z}} = 
+    \frac{z+1}{2^{2+z}}, \quad \forall x,y \in \N$$
+    Ahora deshacemos el cambio y obtenemos
+    $$P_{(X+Y)}(x+y) = \frac{x+y+1}{2^{2+x+y}}, \quad \forall x,y \in \N$$\\ \\
+
+    $X+Y$. Tomamos el siguiente cambio de variable
+    \begin{equation*}
+        g:\R^2 \longrightarrow \R, \quad
+        (X,Y) \longmapsto g(X,Y) = Z = X-Y
+    \end{equation*}
+    que tiene por inversa
+    \begin{equation*}
+        g^{-1}:= \left\{
+        \begin{aligned}
+            X^{-1}(z) = Z +Y \\
+            Y^{-1}(z) = Y           
+        \end{aligned}
+        \right.
+    \end{equation*}
+
+    Calculemos a continuación su función masa de probabilidad 
+    $$P_{(X-Y)}(x-y) = P_Z(z) = P_{(X,Y)}(g^{-1}(z)) = P_{(X+Y)}(z+y,y) = $$
+    $$\sum _{y=0}^z \frac{1}{2^{2+y+y}} = \frac{1}{4}\sum _{x=0}^z \frac{1}{2^{2y}}\cdot \frac{1}{2^{z}} = 
+    \frac{1}{3}\frac{x+1}{2^{z}}, \quad \forall x,y \in \N$$
+    Ahora deshacemos el cambio y obtenemos
+    $$P_{(X-Y)}(x-y) = \frac{1}{3}\left[\frac{x-y+1}{2^{x-y}}\right], \quad \forall x,y \in \N$$. \QED \\ \\
+
+    \textbf{Ejercicio 2: } \textit{Calcular la función generatriz de momentos de 
+    $(Z,T)$ y de $Z+T$, cuando $Z\leadsto\mathcal{P}(\lambda_1)$ y $T\leadsto\mathcal{P}(\lambda_2)$
+    independientes. Es decir siguen distribuciones de Poisson independientes.}\\ \\
+
+    \begin{equation*}
+        \begin{aligned}
+            Z \leadsto \mathcal{P}(\lambda_1), \quad \mathcal{P}(Z=z) = e^{-\lambda_1} \lambda_1^z/z! \\
+            T \leadsto \mathcal{P}(\lambda_2), \quad \mathcal{P}(Z=t) = e^{-\lambda_2} \lambda_2^z/t!\\ \\
+        \end{aligned}
+    \end{equation*}
+
+    \begin{itemize}
+        \item \textit{(Z,T)}. Dados $(t_1,t_2) \in ]-a_1,b_1[\times]-a_2,b_2[, \quad a_i,b_i \in \R^+$ 
+                la función generatriz de momentos de $(Z,T)$ es 
+                $$M_{(Z,T)} = (t_1,t_2) = E\left[exp(t_1Z + t_2T)\right] = E\left[exp(t_1Z)\right]\cdot E\left[exp(t_2T)\right] = $$
+                $$ = exp\left(\lambda_1(e^{t_1}-1)\right)\cdot exp\left(\lambda_2(e^{t_2}-1)\right) = exp\left(\lambda_1(e^{t_1}-1) + \lambda_2(e^{t_2}-1)\right), \quad \forall t_1,t_2$$
+        \item \textit{(Z+T)}. Como $Z$ y $T$ son independientes, tomamos
+                \begin{equation*} 
+                    \left.
+                    \begin{aligned}
+                        Z \leadsto \mathcal{P}(\lambda_1)\\
+                        T \leadsto \mathcal{P}(\lambda_2)
+                    \end{aligned}
+                    \right\} \Rightarrow (Z+T) \leadsto  \mathcal{P}(\lambda_1 + \lambda_2)
+                \end{equation*}
+                Entonces, dado $t \in ]-a,b[$, con $a,b \in \R^+$, la función generatriz de momentos viene dada por 
+                $$M_{(Z+T)}(t) = exp\left((\lambda_1 + \lambda_2)(e^{t}-1)\right), \quad \forall t \in ]-a,b[$$
+                
+    \end{itemize} \QED
+
+
+
+    
+
+
+
+\end{document}

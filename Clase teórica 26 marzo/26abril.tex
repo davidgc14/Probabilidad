@@ -1,0 +1,108 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{mathexam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{dsfont} %Numeros reales, naturales...
+\usepackage{verbatimbox} %comentarios
+
+%\graphicspath{{images/}}
+\newcommand*{\qed}{\hfill\ensuremath{\square}}
+
+%Estructura de ecuaciones
+\setlength{\textwidth}{15cm} \setlength{\oddsidemargin}{5mm}
+\setlength{\textheight}{23cm} \setlength{\topmargin}{-1cm}
+
+
+
+\author{David García Curbelo}
+\title{Probabilidad}
+\date{Actividad teórica 26 de abril}
+
+\pagestyle{empty}
+
+
+\def\R{\mathds{R}}
+\def\sup{$^2$}
+
+\begin{document}
+    \maketitle
+    \setcounter{page}{1}
+    \pagestyle{plain}
+
+    {\bf{Demostración 1: }}
+    Sea $X$ una variable aleatoria sobre un espacio probabilístico $\left(\Omega,\mathcal{A}, P\right)$.
+    Consideramos $Y$ una variable aleatoria cualquiera, distinguimos dos casos:
+    \begin{itemize}
+        \item {\it{Caso 1: }} $Y$ sea discreta, donde $P_X(x,y)=P[X=x, Y=y]$. Consideremos $x=c$
+        $$\Rightarrow P_X(x,y)=P[X=c, Y=y] = P[Y=y] = P[Y=y]\cdot P[X=c] = P_X(x)P_Y(y)$$
+        Consideremos ahora $x \neq c$
+        $$\Rightarrow P_X(x,y)=P[X=x, Y=y] = P[Y=y] = 0 = P[Y=y]\cdot P[X=x] = P_X(x)P_Y(y)$$
+        Por lo tanto obtenemos que $\forall x,y \quad P_X(x,y)=P_X(x)P_Y(y)\Rightarrow X$ e $Y$ independientes.
+
+        \item {\it{Caso 2: }} $Y$ sea continua. Sean $B_1$ y $B_2 \in \mathcal{B}$,
+        con $P_X(B_1 \times B_2)=P(X \in B_1,Y \in B_2)$. Si $c\in B_1$
+        $$\Rightarrow P(X \in B_1,Y \in B_2) = P(Y \in B_2)=P(X\in B_1)P(Y \in B_2)=P_X(B_1)P_Y(B_2)$$
+        $$c \not\in B_1 \Rightarrow P(X \in B_1,Y \in B_2) = 0 = P(X\in B_1)P(Y \in B_2)=P_X(B_1)P_Y(B_2)$$
+    \end{itemize}
+    Por lo tanto concluimos que $X$ e $Y$ son independientes, cualquiera que sea $Y$
+
+    \newpage
+
+    {\bf{Demostración 2: }}
+    Definimos $\underline{X}=(X_1,...,X_n)$, donde $X_1,...,X_n$ son independientes.
+    Sea $(X_{i_1},...,X_{i_k})/\left\{i_1,...,i_k\right\} \subset \left\{1,...,n\right\}$.
+    Veamos que este subconjunto de vectores aleatorios tambien lo son. Distinguimos 2 casos:
+
+    \begin{itemize}
+        \item {\it{Caso 1: }} $\underline{X}$ sea un vector aleatorio discreto.
+        $$P_{X_{i_1},...,X_{i_n}}(x_{i_1},...,x_{i_n})=\sum _{x_l \in E_{X_l}; l\neq i_1,...,i_k} 
+        P_{X_{1},...,X_{n}}(x_{1},...,x_{n})=
+        $$$$\sum _{x_l \in E_{X_l}; l\neq i_1,...,i_k} 
+        P_{X_1}(x_1)\cdots P_{X_n}(x_n)= P_{X_{i_1}}(x_{i_1})\cdots P_{X_{i_k}}(x_{i_k})$$
+        \item {\it{Caso 2: }} $\underline{X}$ sea un vector aleatorio continuo.
+        $$f_{X_{i_1},...,X_{i_n}}(x_{i_1},...,x_{i_n})=\int f_X(x_{i_1},...,x_{i_n}) \prod _{x_l \in E_{X_l}; l\neq i_1,...,i_k}dx_l=
+        $$$$\int f_{X_1}(x_1) \cdots f_{X_n}(x_n) \prod _{x_l \in E_{X_l}; l\neq i_1,...,i_k}dx_l=
+        f_{X_{i_1}}(x_{i_1})\cdots f_{X_{i_k}}(x_{i_k})$$
+    \end{itemize}
+
+    \newpage
+
+    {\bf{Demostración 3: }} 
+    Definimos $\underline{X}=(X_1,...,X_n)$, donde $X_1,...,X_n$ son independientes.
+    Consideramos $(X_{i_1},...,X_{i_k})$ y $(X_{j_1},...,X_{j_p})/ \{i_1,...,i_k\},\{j_1,...,j_p\} \subset \{1,...,n\}$,
+    $i_m \neq j_l \quad m=1,...,k \quad l=1,...,p \quad k+p=n$. Distinguimos dos casos:
+    \begin{itemize}
+        \item {\it{Caso 1: }}  $\underline{X}$ sea un vector aleatorio discreto.
+        $$P_{X_{j_1},...,X_{j_p}}(x_{j_1},..,x_{j_p}/X_{i_1}=Y_{i_1},...,X_{i_k}=Y_{i_k})=
+        \frac{P_{X_1,...,X_n}(x_{j_1},..,x_{j_p}/Y_{i_1},...,Y_{i_k})}{P_{X_{i_1},...,X_{i_k}}(Y_{i_1},...,Y_{i_k})}=
+        $$$$P_{X_{j_1}}(x_{j_1}) \cdots P_{X_{j_p}}(x_{j_p})=P_{X_{j_1},...,X_{j_p}}(x_{j_1},..,x_{j_p})
+        $$$$\Rightarrow \mathnormal{Distribucion marginal de } X_{j_1},...,X_{j_1}$$
+        
+        \item {\it{Caso 2: }}  $\underline{X}$ sea un vector aleatorio continuo.
+        $$f_{X_{j_1},...,X_{j_p}}(x_{j_1},..,x_{j_p}/X_{i_1}=Y_{i_1},...,X_{i_k}=Y_{i_k})=
+        \frac{f_{X_1,...,X_n}(x_{j_1},..,x_{j_p}/Y_{i_1},...,Y_{i_k})}{f_{X_{i_1},...,X_{i_k}}(Y_{i_1},...,Y_{i_k})}=
+        $$$$f_{X_{j_1}}(x_{j_1}) \cdots f_{X_{j_p}}(x_{j_p})=f_{X_{j_1}} \cdots f_{X_{j_p}}(x_{j_1},..,x_{j_p})
+        $$$$\Rightarrow \mathnormal{Distribucion marginal de } X_{j_1},...,X_{j_1}$$
+    \end{itemize}
+
+    \newpage
+
+    {\bf{Demostración 4: }} 
+    Definimos $\underline{X}=(X_1,...,X_n)$, donde $X_1,...,X_n$ son independientes.
+    $\Rightarrow M_{X_1,...,X_n}(t_1,...,t_n)=M_{X_1}(t_1) \cdots M_{X_n}(t_n)$ para el caso discreto.
+    $$M_{X_1,...,X_n}(t_1,...,t_n)=E\left[exp\left(\sum_{i=1}^n t_iX_i\right)\right]
+    \sum _{(x_1,...,x_n) \in E_{\underline{X}}} exp\left(\sum_{i=1}^n t_iX_i\right)$$
+
+    $$P_X(x_1,...,x_n)=\sum _{x_1 \in E_{X_1}}exp(t_1 x_1)P_{X_1}(x_1) + ... + \sum _{x_n \in E_{X_n}}exp(t_n x_n)P_{X_n}(x_n)=
+    $$$$M_{X_1}(t_1) \cdots M_{X_n}(t_n) \quad \forall (t_1,...,t_n) \in (-a_1,b_1)\times ... \times (-a_n,b_n) /
+    $$$$a_i,b_i \in \R^+, \quad i=1,...,n$$
+
+\end{document}

@@ -1,0 +1,137 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{mathexam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{dsfont} %Numeros reales, naturales...
+
+%\graphicspath{{images/}}
+\newcommand*{\qed}{\hfill\ensuremath{\square}}
+
+%Estructura de ecuaciones
+\setlength{\textwidth}{15cm} \setlength{\oddsidemargin}{5mm}
+\setlength{\textheight}{23cm} \setlength{\topmargin}{-1cm}
+
+
+
+\author{David García Curbelo}
+\title{Probabilidad}
+\date{Clase teórica 23 y 24 de Abril}
+
+\pagestyle{empty}
+
+
+
+\def\R{\mathds{R}}
+\def\sup{$^2$}
+
+\begin{document}
+    \maketitle
+    \setcounter{page}{1}
+    \pagestyle{plain}
+
+    {\bf{Actividad 1.}} {\textit{Revisar de nuevo los contenidos referentes al cálculo de momentos centrados y no centrados, 
+    a partir de la formulación general, que establece el cálculo de la esperanza matemática de una función medible 
+    $g(X_1, . . . , X_n)$ de las componentes aleatorias $(X_1, . . . , X_n)$ del vector $\underline{X}$, según se indica a continuación. 
+    Es decir, definir las diferentes $g$ adecuadas, para el cálculo de momentos centrados y no centrados.}}\\ \\
+
+    Para estudiar los momentos centrados y no centrados en base  a la formulación general que establece el cálculo de la 
+    esperanza matemática, debemos considerar primero ${\bf{X}} = (X_1, . . . , X_n) : (\Omega,\mathcal{A}, P_X) \rightarrow (\R ^n, \mathcal{B}^n, P_X)$
+    un vector aleatorio (ya sea discreto o continuo) n-dimensional, y $g: \R ^n \rightarrow \R$ una función continua, para porceder al 
+    cálculo de los momentos centrados y no centrados:
+
+    \begin{itemize}
+        \item Momentos no centrados de orden k de ${\bf{X}}$. Los notaremos por $m_{k_1,\dots,k_n}$, siendo $k=\sum _{i=1}^n k_i$.
+            Corresponden al cálculo de la esperanza matematica de la función
+            $$g({\bf{X}})=g(X_1, . . . , X_n)= X_1^{k_1}\cdots X_n^{k_n}, \quad k=\sum _{i=1}^n k_i$$   
+        \item Momentos centrados (respecto de la media) de orden k de ${\bf{X}}$.  Los notaremos por $\mu_{k_1,\dots,k_n}$, 
+            siendo $k=\sum _{i=1}^n k_i$. Corresponden al cálculo de la esperanza matematica de la función
+            $$g({\bf{X}})=g(X_1, . . . , X_n)=(X_1 - E[X_1])^{k_1} \cdots (X_n - E[X_n])^{k_n}, \quad k=\sum _{i=1}^n k_i$$
+    \end{itemize}
+    \qed
+    \newpage
+
+    {\bf{Actividad 2.}} {\textit{Deducir de forma explícita el cálculo de la varianza de una combinación lineal de variables aleatorias, 
+    aplicando las propiedades anteriormente formuladas sobre la esperanza matemática que todos conocéis, así como se tendrá en cuenta la 
+    definición particular del momento centrado cruzado de orden dos, que define la covarianza, según se indica a continuación.}}
+
+    Sea $X_1, . . . , X_n$ un conjunto de variables aleatorias. Consideramos $\sum _{i=1}^n a_i X_i$ una combinación lineal suya cualquiera.
+    Veamos cuál es la expresión de su varianza. Usando el teorema de König, obtenemos:
+    $$Var\left[\sum  _{i=1}^n a_i X_i \right]=E\left[\left(\sum  _{i=1}^n a_i X_i \right)^2\right]-E\left[\left(\sum  _{i=1}^n a_i X_i \right)\right]^2$$
+   
+    Sabemos que $E\left[\left(\sum  _{i=1}^n a_i X_i \right)\right]=\left(\sum _{i=1}^n a_i E[X_i]\right)^2$. Usando dicha igualdad y sustituyendo
+    en lo anterior, desarrrollando los cuadrados tenemos
+    $$Var\left[\sum  _{i=1}^n a_i X_i \right]=E\left[\sum  _{i=1}^n a_i^2 X_i^2 + \sum  _{i\neq j}^n a_i a_j X_i X_j\right]-
+    \left(\sum  _{i=1}^n a_i^2 E[X_i]^2 + \sum  _{i \neq j}^n a_i a_j E[X_i] E[X_j]\right) = $$
+    $$= \sum  _{i=1}^n a_i^2 E[X_i^2] + \sum  _{i \neq j}^n a_i a_j E[X_i X_j] - \sum  _{i=1}^n a_i^2 E[X_i]^2 - \sum  _{i \neq j}^n a_i a_j E[X_i] E[X_j] = $$
+    $$= \sum  _{i=1}^n a_i^2 Var[X_i] + \sum  _{i \neq j}^n a_i a_j Cov(X_i X_j)$$
+    Obteniendo así lo que buscábamos.
+    \qed
+    \newpage
+
+    {\bf{Actividad 3.}}{\textit{ Particularizar la Desigualdad de Cauchy-Schwarz, derivada a continuación para el producto escalar definido mediante
+    $$\rangle X, Y \langle _ {\mathcal{L}^2 (\Omega, \mathcal{A}, P)} = E[(X-E[X])(Y-E[Y])], \quad E[X^2]<\infty, E[Y^2]<\infty$$
+    al caso de variables aleatorias centradas, es decir, cuando $E[X]=E[Y]=0$.}}
+
+    La desigualdad de Cauchy-Schwarz viene dada por $\langle X, Y\rangle \leq ||X|| \cdot ||Y||$. Tomando el producto escalar y la norma dadas para
+    variables aleatorias centradas, desarrrollamos el producto escalar
+    $$\langle X, Y \rangle _ {\mathcal{L}^2 (\Omega, \mathcal{A}, P)}=E[(X-E[X])(Y-E[Y])] = Cov(X,Y)= E[XY]$$
+    por ser tanto X como Y centradas. Para la norma desarrrollamosde la siguiente forma:
+    $$||X||^2= \rangle X, X \langle = Var[X]= E[X^2]-E[X]=E[X^2], \quad X \in \mathcal{L}^2 (\Omega, \mathcal{A}, P)$$
+    Con ello obtenemos la siguiente desigualdad, $ E[XY]^2 \leq E[X^2]E[Y^2]$, es decir:
+    $$Cov(X,Y)^2 \leq Var[X]Var[Y]$$
+    \qed
+    \newpage
+
+    {\bf{Actividad 4.}}{\textit{Estudiar los siguientes contenidos sobre la función generatriz de momentos de un vector aleatorio multidimensional 
+    $(X_1, . . . , X_n)$ y calcular :
+    \begin{itemize}
+        \item La función generatriz de momentos $M_{\sum _{i=1}^m \underline{X}_i}(t_1, . . . , t_n)$ del vector aleatorio suma 
+        $\sum _{i=1}^m \underline{X}_i$, donde $\underline{X}_i = (X_{i1},...,X_{in}), i = 1, . . . , m$ son vectores aleatorios n–dimensionales 
+        independientes e idénticamente distribuidos.
+        \item Obtener, para $n = m = 2$, los momentos de orden uno y dos no centrados de la suma a partir de la función generatriz de momentos 
+        calculada en el apartado anterior.
+        \item Si se supone para $m = 2 = n$, en el caso anterior, que las componentes de dichos vectores $X_{11}, X_{12}, X_{21}, X_{22}$ 
+        son independientes, calcular de nuevo la función generatriz de momentos del vector suma.
+    \end{itemize}
+    }}
+
+    \textit{Primer apartado}. Por definición, la función generatriz de momentos viene dada por 
+    $$M_{\underline{X}_i}(t_1, . . . , t_n)= g_t\left(x_1,...,x_n\right)=exp(\langle\underline{X}, 
+    t \rangle)=E\left[exp\left( \sum _{i=1}^n t_i \underline{X}_{i}\right)\right]$$
+    Consideramos como $X=\sum _{i=1}^n \underline{X}_i$, donde $\underline{X}_i=(X_{i1},...,X_{in}), i=1,\dots, m$.
+    Conseguimos entonces la igualdad
+    $$M_{\sum _{i=1}^m \underline{X}_i}(t_1, . . . , t_n)=g_t\left(\sum _{i=1}^m \underline{X}_i\right)=
+    E\left[exp\left(\sum _{j=1}^n \sum _{i=1}^m t_j \underline{X}_{ij}\right)\right]$$
+
+    \textit{Segundo apartado}. Procedemos al cálculo de los momentos de orden 1 
+    $$m_{1,0} = \left[\frac{\partial E[exp(t_1X_1+t_2X_2+t_1Y_1+t_2Y_2)]}{\partial t_1}]\right]_{t_1=t_2=0}=$$
+    $$=\left[E[exp(t_1X_1+t_2X_2+t_1Y_1+t_2Y_2)](X_1+Y_1)\right]_{t_1=t_2=0}=E[X_1+Y_1]=E[X_1]+E[Y_1]$$
+
+    $$m_{0,1} = \left[\frac{\partial E[exp(t_1X_1+t_2X_2+t_1Y_1+t_2Y_2)]}{\partial t_2}]\right]_{t_1=t_2=0}=$$
+    $$=\left[E[exp(t_1X_1+t_2X_2+t_1Y_1+t_2Y_2)](X_2+Y_2)\right]_{t_1=t_2=0}=E[X_2+Y_2]=E[X_2]+E[Y_2]$$
+
+    Procedemos al cálculo de los momentos de orden 2
+    $$m_{1,1} = \left[\frac{\partial^2 E[exp(t_1X_1+t_2X_2+t_1Y_1+t_2Y_2)]}{\partial t_1t_2}]\right]_{t_1=t_2=0}=$$
+    $$=\left[E[exp(t_1X_1+t_2X_2+t_1Y_1+t_2Y_2)](X_1+Y_1)(X_2+Y_2)\right]_{t_1=t_2=0}=E[(X_1+Y_1)(X_2+Y_2)]$$
+
+    $$m_{2,0} = \left[\frac{\partial^2 E[exp(t_1X_1+t_2X_2+t_1Y_1+t_2Y_2)]}{\partial^2 t_1}]\right]_{t_1=t_2=0}=E[(X_1+Y_1)^2]$$
+    $$m_{0,2} = \left[\frac{\partial^2 E[exp(t_1X_1+t_2X_2+t_1Y_1+t_2Y_2)]}{\partial^2 t_2}]\right]_{t_1=t_2=0}=E[(X_2+Y_2)^2]$$
+
+    \textit{Tercer apartado}. En caso de ser todas las variables aleatorias independientes, se dan los mismos resultados
+    vistos en el apartado anterior, añadiendo:
+
+    $$m_{1,1}=E[(X_1+Y_1)]E[(X_2+Y_2)]$$
+    $$m_{2,0}=E[(X_1+Y_1)^2]=E[(X_1+Y_1)]^2$$
+    $$m_{0,2}=E[(X_2+Y_2)^2]=E[(X_2+Y_2)]^2$$
+    \qed
+    
+
+\end{document}
