@@ -39,8 +39,100 @@
     \setcounter{page}{1}
     \pagestyle{plain}
     
-    \textbf{Ejercicio: } \textit{Demostrar las propiedades enunciadas en el P3T4 }
+    \textbf{Ejercicio: } \textit{Demostrar las propiedades enunciadas en el P3T4 }\\ \\
+
+    Calculemos para ello los siguientes datos, necesarios para la demostración del primer apartado:
+$$
+    E[X/Y=1]=3/2, \quad
+    E[X/Y=2]=9/5, \quad 
+    E[X/Y=3]=20/7, \quad 
+    E[X/Y=4]=16/5 
+$$
+
+$$
+    E[X/Y]= \left\{
+    \begin{aligned}
+        1 \xrightarrow{f_2} 3/2  ,\quad P_{f_2}(1)=2/24 \quad\\
+        2 \xrightarrow{f_2} 9/5 ,\quad P_{f_2}(2)=5/24 \quad\\
+        3 \xrightarrow{f_2} 20/7 ,\quad P_{f_2}(3)=7/24 \thinspace \thinspace\\
+        4 \xrightarrow{f_2} 16/5 ,\quad P_{f_2}(4)=10/24\\
+    \end{aligned}
+    \right.
+$$
+
+$$
+    E[X^2/Y=1]=5/2, \quad
+    E[X^2/Y=2]=19/5, \quad 
+    E[X^2/Y=3]=62/7, \quad 
+    E[X^2/Y=4]=106/10 
+$$
+
+$$
+    E[X^2/Y]= \left\{
+    \begin{aligned}
+        1 \xrightarrow{h_2} 5/2  ,\quad P_{h_2}(1)=2/24 \quad\\
+        2 \xrightarrow{h_2} 19/5 ,\quad P_{h_2}(2)=5/24 \quad\\
+        3 \xrightarrow{h_2} 62/7 ,\quad P_{h_2}(3)=7/24 \thinspace \thinspace\\
+        4 \xrightarrow{h_2} 106/10 ,\quad P_{h_2}(4)=10/24\\
+    \end{aligned}
+    \right.
+$$
+
+
     
-    
-    
+    \begin{align*}
+        &Var[X/Y=1] = 5/2 - (3/2)^2 = 1/4, \quad  P_Y(1) = 2/24\\
+        &Var[X/Y=2] = 19/5 - (9/5)^2 = 14/25, \quad  P_Y(2) = 5/24\\
+        &Var[X/Y=3] = 62/7 - (20/7)^2 = 34/49, \quad  P_Y(3) = 7/24 \\
+        &Var[X/Y=4] = 106/10 - (16/5)^2 = -176/25, \quad  P_Y(4) = 10/24\\
+    \end{align*}
+
+    $$ECM[Var(X/Y)] = \frac{1}{4} \cdot \frac{2}{24} + \frac{14}{25} \cdot \frac{5}{24} + \frac{34}{49} \cdot \frac{7}{24} + \frac{9}{25} \cdot \frac{10}{24} = \frac{823}{1680}$$
+ 
+    \newpage
+
+    Resolvamos por tanto el siguiente apartado:
+
+    \begin{align*}
+        &E[X] = \frac{1}{8} + 2\cdot\frac{7}{24} + 3\cdot\frac{3}{8} + 4 \cdot \frac{5}{24} = \frac{8}{3} \\
+        &E[X^2] = \frac{1}{8} + 2^2\cdot\frac{7}{24} + 3^2\cdot\frac{3}{8} + 4^2\cdot \frac{5}{24} = 8 
+    \end{align*}
+
+    Y por lo tanto obtenemos $Var[X] = E[X^2] - \left(E[X]\right)^2 = \frac{8}{9}$
+
+    \begin{align*}
+        &E[Y] = \frac{1}{12} + 2\cdot\frac{5}{24} + 3\cdot\frac{7}{24} + 4 \cdot \frac{5}{12} = \frac{73}{24} \\
+        &E[Y^2] = \frac{1}{12} + 2^2\cdot\frac{5}{24} + 3^2\cdot\frac{7}{24} + 4^2\cdot \frac{5}{12} = \frac{245}{24}
+    \end{align*}
+
+    Y por lo tanto obtenemos $Var[Y] = E[Y^2] - \left(E[Y]\right)^2 =\frac{551}{576}$. Entonces tenemos que:
+
+    \begin{align*}
+        &\eta ^2 _{Y/X} = 0.485887
+        &\eta ^2 _{X/Y} = 0.448884
+    \end{align*}
+
+    \newpage
+
+    Calculemos las rectas de regresión para el siguiente apartado:
+    $$E[XY] = \frac{209}{24}, \quad Cov[X,Y] = E[XY] - E[X]\cdot E[Y] = \frac{43}{72}$$
+
+    Entonces obtenemos:\\
+
+    \fbox{X/Y}\\
+    $$\hat{x} = E[X] + \frac{Cov(X,Y)}{Var[Y]}(Y-E[Y]) = \frac{344}{551}x + \frac{423}{451}$$\\
+
+    \fbox{Y/X}\\
+    $$\hat{y} = E[Y] + \frac{Cov(X,Y)}{Var[X]}(X-E[X]) = \frac{43}{64}x + \frac{5}{4}$$\\ \\
+
+    Por último calcularemos el coeficiente de correlación
+    $$P_{X,Y} = \frac{Cov(X,Y)}{\sqrt{Var[X]Var[Y]}} = \frac{43/72}{\sqrt{\frac{551}{576}\cdot \frac{8}{9}}} = 0.164766$$
+    El cual podemos apreciar que se trata de un buen ajuste, ya que el coeficiente de correlación es próximo a 1.
+
+
+
+
+
+
+
 \end{document}
