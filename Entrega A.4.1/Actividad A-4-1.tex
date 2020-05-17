@@ -25,7 +25,7 @@
 
 \author{David García Curbelo}
 \title{Probabilidad}
-\date{Actividad A.4.1. propuesta}
+\date{Esperanza condicionada, actividad A.4.1}
 
 \pagestyle{empty}
 
@@ -39,8 +39,67 @@
     \setcounter{page}{1}
     \pagestyle{plain}
     
-    \textbf{Actividad A.4.1. : } \textit{Demostrar las propiedades enunciadas sobre la esperanza condicionada }
+    \textbf{Actividad A.4.1. : } \textit{Demostrar las propiedades enunciadas sobre la esperanza condicionada }\\ \\
+
+    \textbf{1. } Estudiemos por separado el caso continuo y el caso discreto para la demostración.
     
+    \begin{enumerate}
+        \item Caso continuo. \\
+                $$E[X/Y] = \int_{Supp(f_{X/Y})} x\cdot f_{X/Y}(x) \thinspace dx = \int_{Supp(f_{X/Y}), \thinspace x\geq 0} x\cdot f_{X/Y}(x) \thinspace dx + 
+                \int_{Supp(f_{X/Y}), \thinspace x<0} x\cdot f_{X/Y}(x) \thinspace dx$$
+                Como el conjunto $x\in Supp(f_{X/Y}), \thinspace x<0$ tiene medida cero, su integral es nula, y obtenemos que $E[X/Y] \geq 0$
+        \item Caso discreto. \\
+                Para  este caso, supongamos en toda la demostración que $X \geq 0$. Tenemos por tanto 
+                $$E[X/Y] = \sum_{x\in Supp(p_{X/Y})} x\cdot p_{X/Y}(x)$$ 
+                Como $x\geq 0$ y $p_{X/Y}(x) \geq 0$, obtenemos que $E[X/Y] \geq 0$. Ahora demostremos que $E[X/Y] = 0 \Leftrightarrow P(X=0) = 1$:
+                \begin{itemize}
+                    \item[\fbox{$\Rightarrow$}] $$E[X/Y] = \sum_{x\in Supp(p_{X/Y})} x\cdot p_{X/Y}(x) = 0$$ 
+                            Como $p_{X/Y=y}(x) > 0, \quad x\in Supp(f_{X/Y=y})$, obtenemos que el único elemento del tipo de $p_{X/Y}$ es $x=0$. es decir, $P(X=0/Y)=1$.
+                            Por otro lado, obtenemos que $X$ es una variable degenerada, por lo que es independiente a $Y$ $\Rightarrow$ $P(X=0/Y)=P(X=0)=1$
+                    \item[\fbox{$\Leftarrow$}] Tenemos que $X$ es una variable degenerada, $E_X = \{0\}$. Suponiendo que $0 \in Supp_X/Y$, Tenemos
+                            $$E[X/Y] = \sum_{x\in Supp(p_{X/Y})} x\cdot p_{X/Y}(x) = 0 \cdot p_{X/Y}(x) = 0$$ 
+                \end{itemize}
+    \end{enumerate}
+    \QED \\ \\
+
+    \newpage
+
+    \textbf{2. } Estudiemos por separado el caso continuo y el caso discreto para la demostración.
+
+    \begin{enumerate}
+        \item Caso discreto. \\
+                Aplicando la desigualdad triangular y que $p_{X/Y}(x) \geq 0, \quad \forall x:$
+                $$\left| E[X/Y] \right| = \left| \sum_{x\in Supp(p_{X/Y})} x\cdot p_{X/Y}(x) \right| \leq   \sum_{x\in Supp(p_{X/Y})} \left| x\cdot p_{X/Y}(x) \right| \leq $$
+                $$\leq \sum_{x\in Supp(p_{X/Y})} \left| x \right| \cdot p_{X/Y}(x) = E[|X|/Y]$$
+                $$\Rightarrow E[X/Y] \leq E[|X|/Y]$$
+        \item Caso continuo. \\
+                Utilizamos las propiedades de las integrales y que $f_{X/Y}(x)\geq 0, \forall x :$
+                $$\left| E[X/Y] \right| = \left| \int_{Supp(f_{X/Y})} x\cdot f_{X/Y}(x) \thinspace dx \right| \leq  \int_{Supp(f_{X/Y})} \left|x\cdot f_{X/Y}(x) \thinspace \right|dx  \leq$$
+                $$\leq \int_{Supp(f_{X/Y})} \left| x \right|\cdot f_{X/Y}(x) \thinspace dx = E[|X|/Y]$$
+                $$\Rightarrow E[X/Y] \leq E[|X|/Y]$$
+    \end{enumerate}
+    \QED \\ \\
+
+    \newpage
+
+    \textbf{3. } Estudiemos por separado el caso continuo y el caso discreto para la demostración.
+
+    \begin{enumerate}
+        \item Caso discreto. \\
+                $$E\left[\sum_{i=1}^n a_iX_i +b /Y\right] = \sum_{x_1, ..., x_n \in Supp(p_{X_1,...,X_n/Y})} \left[\sum_{i=1}^n (a_ix_i + b)\right]p_{X_1,...,X_n/Y}(x_1,...,x_n) = $$
+                $$\sum_{i=1}^n a_i \sum_{x_i \in Supp(X_i/Y)} x_i \cdot p_{X_i/Y}(x_i) + b = \sum_{i=1}^n a_i E[X_i/Y] +b$$
+        \item Caso continuo. \\
+                $$E\left[\sum_{i=1}^n a_iX_i +b /Y\right] = \int_{ upp(p_{X_1,...,X_n/Y})} \left[\sum_{i=1}^n (a_ix_i + b)\right]f_{X_1,...,X_n/Y}(x_1,...,x_n) \thinspace dx_1 \cdots dx_n= $$
+                $$\sum_{i=1}^n a_i \int_{Supp(f_{X_i/Y})} x_i \cdot f_{X_i/Y}(x_i) \thinspace dx_i + b = \sum_{i=1}^n a_i E[X_i/Y] +b$$
+    \end{enumerate}
+    \QED \\ \\
+
+    \newpage
+
+    \textbf{4. } Estudiemos por separado el caso continuo y el caso discreto para la demostración.
+
+
+
     
     
 \end{document}
