@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7420) (preloaded format=pdflatex 2020.5.15)  17 MAY 2020 10:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7420) (preloaded format=pdflatex 2020.5.15)  17 MAY 2020 21:23
 entering extended mode
 **"c:/Users/Arquímedes/Desktop/Probabilidad/Entrega A.4.1/Actividad A-4-1.tex"
 ("c:/Users/Arquímedes/Desktop/Probabilidad/Entrega A.4.1/Actividad A-4-1.tex"
@@ -531,7 +531,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
-[2]
+
 Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
@@ -551,19 +551,144 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
-[3] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+
+Overfull \hbox (45.26147pt too wide) detected at line 117
+\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =Y\OT1/cmr/m/n/10 ]] = [] [] \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = [] [] \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  []  \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) =
+ []
+
+[2]
+Overfull \hbox (72.07866pt too wide) detected at line 119
+\OT1/cmr/m/n/10 = [] [] \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 ) = [] \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 ) = [] \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 E\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 )]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+
+Overfull \hbox (40.42159pt too wide) detected at line 123
+\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =Y\OT1/cmr/m/n/10 ]] = [][] [][] \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dxdy \OT1/cmr/m/n/10 = [][] [][] \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  []  \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) =
+ []
+
+
+Overfull \hbox (52.11919pt too wide) detected at line 125
+\OT1/cmr/m/n/10 = [][] [][] \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) [][] \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 ) = [][] \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 E\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 )]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+ []
+
+
+Overfull \hbox (66.85023pt too wide) detected at line 134
+\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Xg\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Y\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =Y \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 y\OT1/cmr/m/n/10 ] = [] \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 E\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X=Y \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 y\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 )
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+
+Overfull \hbox (69.31749pt too wide) detected at line 137
+\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Xg\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Y\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =Y \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 y\OT1/cmr/m/n/10 ] = [][] \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 ) [][] \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 E\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 X=Y \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 y\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 )
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+
 AED: lastpage setting LastPage
 [4] ("c:/Users\Arquímedes\Desktop\Probabilidad\Entrega A.4.1\Actividad A-4-1.aux") ) 
 Here is how much of TeX's memory you used:
- 25697 strings out of 480811
- 645231 string characters out of 2893361
- 1029906 words of memory out of 3000000
- 41249 multiletter control sequences out of 15000+200000
+ 25698 strings out of 480811
+ 645239 string characters out of 2893361
+ 1032906 words of memory out of 3000000
+ 41250 multiletter control sequences out of 15000+200000
  540605 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,7n,98p,791b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Arquímedes/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "c:/Users\Arquímedes\Desktop\Probabilidad\Entrega A.4.1\Actividad A-4-1.pdf" (5 pages, 151909 bytes).
+Output written on "c:/Users\Arquímedes\Desktop\Probabilidad\Entrega A.4.1\Actividad A-4-1.pdf" (5 pages, 158963 bytes).
 PDF statistics:
  77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
