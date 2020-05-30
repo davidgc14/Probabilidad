@@ -43,6 +43,26 @@
 
     Calculemos primero $\rho^2_{X,Y}$, la cual sabemos calcular de la siguiente forma:
 
-    $$\rho_{X,Y}^2 = \frac{ \left[ \int_0^{\infty} \int_x^{\infty} \right]^2 }{}$$
+    $$\rho_{X,Y}^2 = \frac{ 
+            \left[ \int_0^{\infty} \int_x^{\infty} xye^{-y} \thinspace dydx - \left( \int_0^{\infty} xe^{-x}dx \right) \left( \int_0^{\infty} y^2e^{-y}dy \right) \right]^2
+        }
+        {
+            \left[ \int_0^{\infty} y^3e^{-y}dy - \left( \int_0^{\infty} y^2e^{-y}dy \right)^2 \right] \left[ \int_0^{\infty} x^2e^{-x}dx - \left( \int_0^{\infty} xe^{-x}dx \right)^2 \right]
+        }
+    = \frac{(3- 1\cdot 2)^2}{(6-2^2)(2-1^2)} = \frac{1}{2}
+    $$
+    $$ \Rightarrow \rho_{X,Y} = \frac{1}{\sqrt{2}} $$ \\ \\
+
+    Por lo tanto sustituyendo en las fórmulas indicadas, obtenemos los dos siguientes resultados:\\ \\
+
+    $$\varphi_{opt}^L (X) = \int_0^{\infty} y^2e^{-y}dy + \sqrt{\frac{Var(Y)}{Var(X)}} \rho_{X,Y} \left(X - \int_0^{\infty} xe^{-x}dx\right) = 2 + \sqrt{\frac{2}{2}} (x-1)$$ \\ \\
+    $$ \Rightarrow \varphi_{opt}^L (X) = 1 + x$$\\ \\
+
+    $$\varphi_{opt}^L (Y) = \int_0^{\infty} xe^{-x}dx + \sqrt{\frac{Var(X)}{Var(Y)}} \rho_{X,Y} \left(Y - \int_0^{\infty} y^2e^{-y}dy \right) = 1 + \sqrt{\frac{1}{2}} \sqrt{\frac{1}{2}} (y-2)$$ \\ \\
+    $$ \Rightarrow \varphi_{opt}^L (Y) = \frac{y}{2}$$
+
+
+
+
 
 \end{document}
